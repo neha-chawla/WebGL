@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draw a point with a mouse click</title>
+  </head>
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+      Extra Features<br>
+      1) "Undo Shape" button to undo the last shape drawn <br>
+      2) "Randomize Clear Colored Canvas" button to draw a new randomly colored canvas <br>
+      3) "Randomize Shape" button to randomly select the next shape drawn <br>
+      4) "Randomize Coor" button to randomly select the next color used <br>
+      5) "Opacity" slider to change the transparency of the color selected <br> <br>
+      <button type="button" onclick="clearCanvas()">Clear Canvas</button>
+      <button type="button" onclick="randomizeCanvas()">Randomize Clear Colored Canvas</button>
+      <button type="button" id ="undo">Undo Shape</button>
+      <br><br>Drawing Mode:
+      <button type="button" onclick="squares()">Squares</button>
+      <button type="button" onclick="triangles()">Triangles</button>
+      <button type="button" onclick="circles()">Circles</button>
+      <button type="button" onclick="randomShape()">Randomize Shape</button>
+      <div>
+      Shape Color: <button type="button" onclick="randomize()">Randomize Color</button>
+      <br>
+      <font color="red"> &nbsp;&nbsp;&nbsp;Red &nbsp; </font>
+          <input type="range" min="0" max="1" value="1" step ="0.01" class="rslider" id="myRedRange">
+          <span id="redDemo"></span>
+      </div>
+      <div>
+      <font color="green"> &nbsp;&nbsp;&nbsp;Green &nbsp; </font>
+          <input type="range" min="0" max="1" value="0.5" step ="0.01" class="gslider" id="myGreenRange">
+          <span id="greenDemo"></span>
+      </div>
+      <div>
+      <font color="blue"> &nbsp;&nbsp;&nbsp;Blue &nbsp; </font>
+          <input type="range" min="0" max="1" value="0.5" step ="0.01" class="bslider" id="myBlueRange">
+          <span id="blueDemo"></span>
+      </div>
+      <div> &nbsp;&nbsp;&nbsp;Opacity
+          <input type="range" min="0" max="1" value="1" step ="0.01" class="transSlider" id="myTransRange">
+          <span id="transDemo"></span>
+      </div>
+    </p>
+    <div> Shape Size:
+        <input type="range" min="0.01" max="0.75" value="0.1" step ="0.01" class="sizeSlider" id="mySizeRange">
+        <span id="sizeDemo"></span>
+    </div>
+    <div> (Circles) Segment Count:
+        <input type="range" min="4" max="40" value="20" step ="1" class="segmentSlider" id="mySegments">
+        <span id="segmentDemo"></span>
+    </div>
+    <br> <br>
+    <script src="../Chawla_Neha_Assignment_1/lib/webgl-utils.js"></script>
+    <script src="../Chawla_Neha_Assignment_1/lib/webgl-debug.js"></script>
+    <script src="../Chawla_Neha_Assignment_1/lib/cuon-utils.js"></script>
+    <script src="../Chawla_Neha_Assignment_1/src/assignmentOne.js"></script>
+  </body>
+</html>

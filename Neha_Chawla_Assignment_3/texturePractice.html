@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draw cube with specification of face color</title>
+  </head>
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+      <div> Rotation Slider:
+          <input type="range" min="0" max="359" value="0" step ="1" class="rotAngle" id="myRotAngle">
+          <p> <span id="angleDemo"></span>
+      </div>
+    </p>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="../src/texturePractice.js"></script>
+  </body>
+</html>
